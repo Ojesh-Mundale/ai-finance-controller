@@ -1,5 +1,5 @@
 # AI Finance Controller
-> **Razorpay AI Buildathon — Track 04: AI Finance Controller**
+
 
 An AI-powered finance operations controller that closes the reconciliation loop across multi-source transaction data. Built with **Spring Boot 3.3 (Java 21)** backend and **React 18 + Vite** frontend.
 
