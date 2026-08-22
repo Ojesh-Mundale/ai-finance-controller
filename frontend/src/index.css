@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --color-bg-primary: #0a0e1a;
+  --color-bg-card: rgba(15, 23, 42, 0.8);
+  --color-bg-card-solid: #0f172a;
+  --color-bg-sidebar: #0d1117;
+  --color-accent-blue: #3b82f6;
+  --color-accent-razorpay: #2D81FF;
+  --color-accent-green: #10b981;
+  --color-accent-amber: #f59e0b;
+  --color-accent-red: #ef4444;
+  --color-accent-rose: #f43f5e;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-medium: rgba(255, 255, 255, 0.1);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: var(--color-bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Pulse for live indicators */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-live-pulse {
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Table row alternation */
+.table-row-even {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.table-row-odd {
+  background-color: transparent;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, select {
+  transition: all 0.2s ease;
+}
+
+/* Confidence bar */
+.confidence-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.confidence-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
